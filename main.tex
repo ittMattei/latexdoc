@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{lmodern}
+\geometry{a4paper, margin=2.5cm}
+
+\title{Introduzione alla Statistica per la Regressione Lineare}
+\date{}
+\begin{document}
+
+\maketitle
+
+\section*{1. Media}
+La \textbf{media} (o media aritmetica) è la somma di tutti i valori divisa per il numero dei valori:
+
+\[
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+\]
+
+\textit{Esempio:} dati i valori 6, 7, 8, la media è:
+
+\[
+\bar{x} = \frac{6+7+8}{3} = 7
+\]
+
+\section*{2. Varianza}
+La \textbf{varianza} misura quanto i dati sono dispersi intorno alla media.
+
+\[
+\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
+\]
+
+\textbf{Formula semplificata:}
+
+\[
+\sigma^2 = \frac{\sum x_i^2 - n \cdot \bar{x}^2}{n}
+\]
+
+La \textbf{deviazione standard} è la radice quadrata della varianza:
+
+\[
+\sigma = \sqrt{\sigma^2}
+\]
+
+\section*{3. Covarianza}
+La \textbf{covarianza} misura come due variabili variano insieme:
+
+\[
+\text{Cov}(X,Y) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})
+\]
+
+\textbf{Formula semplificata:}
+
+\[
+\text{Cov}(X,Y) = \frac{\sum x_i y_i - n \cdot \bar{x} \cdot \bar{y}}{n}
+\]
+
+\section*{4. Coefficiente di correlazione (di Pearson)}
+Misura quanto due variabili sono linearmente correlate. È un numero tra -1 e 1:
+
+\[
+r = \frac{\text{Cov}(X, Y)}{\sigma_X \cdot \sigma_Y}
+\]
+
+\begin{itemize}
+    \item $r = 1$: correlazione perfetta positiva
+    \item $r = -1$: correlazione perfetta negativa
+    \item $r = 0$: nessuna correlazione lineare
+\end{itemize}
+
+\section*{5. Regressione Lineare}
+Serve a trovare la \textbf{retta} che meglio rappresenta la relazione tra due variabili.
+
+\[
+y = a + bx
+\]
+
+Dove:
+\[
+b = \frac{\text{Cov}(X,Y)}{\text{Var}(X)} \quad \text{e} \quad a = \bar{y} - b\bar{x}
+\]
+
+Questa retta è chiamata \textit{retta di regressione} e permette di fare previsioni. È una delle basi dell'\textbf{apprendimento supervisionato} in Intelligenza Artificiale.
+
+\end{document}
+
